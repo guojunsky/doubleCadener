@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双日期控件</title>
+	<link rel="stylesheet" href="css/calendar.css">
+ 
+</head>
+<body>
+	 <input type="text" id="cen">
+	 <script type="text/javascript" src="sea-modules/seajs/seajs/2.2.1/sea.js"></script>
+	 <script type="text/javascript">
+	    seajs.config({
+	    	alias:{
+	    		 '$':'jquery/jquery/1.7.2/jquery'
+	    	}
+	    })
+        seajs.use(['arale/calendar/1.0.0/double-calendar'],function(Cen){
+               new Cen({
+               	trigger:'#cen',
+               	prefixdd:'到',
+               	range:['2015-5-18',null]
+               });
+        });
+	 </script>
+	
+</body>
+</html>
